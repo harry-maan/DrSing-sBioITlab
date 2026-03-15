@@ -64,21 +64,7 @@
         </section>
 
         <section class="container">
-            <form class="request-form">
-                <h2><i class="fas fa-clipboard-list"></i> Request/Query form for the Training /Internship</h2>
-                <input type="text" placeholder="Your Name *" required>
-                <input type="email" placeholder="Email *" required>
-                <input type="Affiliation" placeholder="Name of Institute *" required>
-                <input type="Contact" placeholder="Contact details of endorsing faculty *" required>
-                <select required>
-                    <option value="">Select Programs</option>
-                    <option>Training</option>
-                    <option>Internships</option>
-                </select>
-                <textarea placeholder="Statement of Purpose *" required></textarea>
-                <button type="submit">Submit Request</button>
-            </form>
-        </section>
+
         <form class="request-form" id="myRequestForm">
     <h2><i class="fas fa-clipboard-list"></i> Request/Query form for the Training /Internship</h2>
     
@@ -99,7 +85,7 @@
     <!-- Changed type to "button" to run our script instead -->
     <button type="button" onclick="openMailApp()">Submit Request</button>
 </form>
-
+</section>
 <script>
 function openMailApp() {
     // 1. Get the values from the form
