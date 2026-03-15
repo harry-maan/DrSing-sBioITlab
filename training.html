@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Programs | Dr. Harvinder Singh - ICMR-NIIRNCD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles-bg"></div>
+    <div class="md-animation">
+      <img src="gifs/BioITlab_logo.gif" alt="MD Simulation" class="md-gif">
+        <img src="gifs/redock_animate_optim2.gif" alt="MD Simulation" class="md-gif">
+        <img src="gifs/my_complex_movie.gif" alt="MD Simulation" class="md-gif">
+        <img src="gifs/model.gif" alt="MD Simulation" class="md-gif">
+    </div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">Dr Singh's BioIT Lab</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html#Home">Home</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="training.html#Internships">Internships</a></li>
+                    <li><a href="training.html#training">Training</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="subpage-hero">
+            <h1><i class="fas fa-flask"></i> Training Programs</h1>
+            <p>The Dr Singh's BioIT lab offers two Internship programs and various training programs. Internship programs being conducted as per institute's norms, whereas training programs can be conducted on request.</p>
+        </section>
+        <section id="Internships" class="container">
+            <h2>Internships</h2>
+          
+            <div class="card-grid"><div class="card">
+            <!-- Your existing bio content here -->
+            <p><strong>6-Month Program (Dissertation):</strong> This structured training is designed for final-semester postgraduate students (M.Sc., MPH, M.Tech) in fields like Public Health, Epidemiology, and Biotechnology, requiring a one-time fee of ₹10,000.</p>
+<p><strong>Short-Term Program (2–3 Months):</strong> Aimed at motivated graduate and postgraduate students for hands-on research exposure, this program focuses on areas like Bioinformatics and Health Social Sciences and typically involves a fee of ₹5,000.</p>
+<p><strong>Key Requirements:</strong> Both programs require an application endorsed by the student's Head of Institution, a 500-word Statement of Purpose (SOP), and a minimum of 80% attendance for certification</p>
+<li><a href="https://niirncd.icmr.org.in/index.php">Apply for Internship</a></li>
+        </section>
+
+        
+        <section id="training" class="container">
+            <h2>Training</h2>
+          
+            <div class="card-grid"><div class="card">
+            <!-- Your existing bio content here -->
+            <p>Dr Singh's BioIT lab can offer various training programs on request as per need/request to develop skilled asset in applied medical research. Major areas can be coverd:
+            <strong>Statistical Analysis</strong> using R/RStudio, <strong>Meta-analysis</strong> (Network Meta-analysis), <strong>Computer Aided Drug-Discovery</strong> (Virtual Screening, Molecular Dynamics Simulations, Meta-dynamics, MM/PBSA, Free-energy landscape) and <strong>microbiology laboratory</strong> techniques in medical research.</p>
+            <p><strong>Eligibility Criteria: </strong> These training programs can be availed by the final-semester postgraduate students or PhD students from any stream of life sciences.</p>
+<p><strong>Key Requirements:</strong> Training programs require an application endorsed by the student's Head of Institution, a 500-word Statement of Purpose (SOP), and a minimum of 80% attendance for certification</p>
+<li><a href="https://niirncd.icmr.org.in/index.php">Apply for Internship</a></li>
+        </section>
+
+        <section class="container">
+            <form class="request-form">
+                <h2><i class="fas fa-clipboard-list"></i> Request/Query form for the Training /Internship</h2>
+                <input type="text" placeholder="Your Name *" required>
+                <input type="email" placeholder="Email *" required>
+                <input type="Affiliation" placeholder="Name of Institute *" required>
+                <input type="Contact" placeholder="Contact details of endorsing faculty *" required>
+                <select required>
+                    <option value="">Select Programs</option>
+                    <option>Training</option>
+                    <option>Internships</option>
+                </select>
+                <textarea placeholder="Statement of Purpose *" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+        <form class="request-form" id="myRequestForm">
+    <h2><i class="fas fa-clipboard-list"></i> Request/Query form for the Training /Internship</h2>
+    
+    <input type="text" id="name" placeholder="Your Name *" required>
+    <input type="email" id="email" placeholder="Email *" required>
+    <input type="text" id="inst" placeholder="Name of Institute *" required>
+    <input type="text" id="contact" placeholder="Contact details of endorsing faculty *" required>
+    
+    <select id="program" required>
+        <option value="">Select Programs</option>
+                    <option>Training</option>
+                    <option>Internship (6 Months)</option>
+                    <option>Internships (3 Months)</option>
+                </select>
+    
+    <textarea id="sop" placeholder="Statement of Purpose *" required></textarea>
+    
+    <!-- Changed type to "button" to run our script instead -->
+    <button type="button" onclick="openMailApp()">Submit Request</button>
+</form>
+
+<script>
+function openMailApp() {
+    // 1. Get the values from the form
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const inst = document.getElementById('inst').value;
+    const program = document.getElementById('program').value;
+    const sop = document.getElementById('sop').value;
+
+    // 2. Build the email parts
+    const recipient = "harvinders.hq@icmr.gov.in";
+    const subject = encodeURIComponent("New Facility Request - " + name);
+    const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Institute: ${inst}\n` +
+        `Program: ${program}\n\n` +
+        `Statement of Purpose:\n${sop}`
+    );
+
+    // 3. Open the mail app
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+}
+</script>
+
+    </main>
+
+    <footer><p>&copy; 2026 Dr. Harvinder Singh | Dr Singh's BioIT lab</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
