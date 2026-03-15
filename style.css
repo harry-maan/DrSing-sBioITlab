@@ -62,7 +62,42 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; overflow
 .contact-form button:hover { transform: scale(1.05); }
 
 /* Responsive */
-@media (max-width: 768px) { .nav-menu { display: none; } /* Add hamburger JS */ .hero-text h1 { font-size: 2rem; } }
+/* === PERFECT MOBILE GIF SIZING === */
+@media (max-width: 1024px) {
+    .md-animation { 
+        width: 250px; 
+        height: 250px; 
+        top: 8%; 
+        right: 8%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .md-animation { 
+        width: 180px; 
+        height: 180px; 
+        top: 3%; 
+        right: 3%; 
+        opacity: 0.3; /* Lighter on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .md-animation { 
+        width: 140px; 
+        height: 140px; 
+        top: 2%; 
+        right: 2%; 
+        opacity: 0.25; /* Very light */
+    }
+}
+
+@media (max-width: 360px) {
+    .md-animation { 
+        display: none; /* Hide completely on tiny screens */
+    }
+}
+
 
 /* Animations */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
