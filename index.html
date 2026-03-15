@@ -9,6 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
     <meta name="msvalidate.01" content="D4C4B0860150CD630F82111635B44F6F" />
+    <script>
+// Mobile Navbar Toggle
+function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+// Close menu when clicking links
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
+});
+</script>
 <body>
       <div class="md-animation">
       <img src="gifs/BioITlab_logo_15_march.gif" alt="MD Simulation" class="md-gif">
