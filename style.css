@@ -312,3 +312,71 @@ section { animation: fadeInUp 0.8s ease-out; }
 }
 
 
+
+/* What's New Section Styling */
+.whats-new-container {
+    background: #f8f9fa; /* Light background to stand out */
+    border-bottom: 2px solid #007bff; /* Accent color matching your theme */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.whats-new-label {
+    background: #007bff;
+    color: white;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    z-index: 2; /* Keeps label above the moving text */
+    white-space: nowrap;
+}
+
+.marquee-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    animation: marquee 25s linear infinite;
+}
+
+/* Individual links styling */
+.marquee-content a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 50px; /* Space between links */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.marquee-content a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Pause animation on hover so users can click easily */
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* The movement logic */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
