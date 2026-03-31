@@ -315,7 +315,8 @@ section { animation: fadeInUp 0.8s ease-out; }
 
 /* What's New Section Styling */
 .whats-new-container {
-    background: #f8f9fa; /* Light background to stand out */
+    
+    margin-top: 10px; /* Adjust this: Navbar height (e.g., 60px) + Gap (20px) */background: #f8f9fa; /* Light background to stand out */
     border-bottom: 2px solid #007bff; /* Accent color matching your theme */
     display: flex;
     align-items: center;
