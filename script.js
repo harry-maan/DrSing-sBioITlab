@@ -1,6 +1,6 @@
 // Counter Animation for Metrics (update with real values)
 function animateMetrics() {
-    const metrics = { citations: 236, hindex: 8, i10: 7 };
+    const metrics = { citations: 244, hindex: 8, i10: 7 };
     Object.keys(metrics).forEach(key => {
         const el = document.getElementById(key);
         let count = 0;
